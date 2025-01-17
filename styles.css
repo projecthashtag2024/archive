@@ -8,10 +8,10 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   display: flex;
-  flex-direction: column; /* 전체 페이지를 세로 방향으로 배치 */
-  justify-content: space-between; /* 푸터가 아래로 배치되도록 */
-  min-height: 100vh; /* 페이지 높이가 최소 100vh로 설정되어 푸터가 아래에 위치 */
-  align-items: center;
+  flex-direction: column; /* 세로로 배치 */
+  justify-content: flex-start; /* 컨테이너가 상단에 붙도록 설정 */
+  align-items: center; /* 중앙 정렬 */
+  min-height: 100vh; /* 화면 높이가 최소 100vh */
 }
 
 .container {
@@ -24,6 +24,7 @@ body {
   flex-direction: column; /* 세로로 배치 */
   justify-content: center;
   align-items: center;
+  margin-top: 10%; /* 화면 중앙보다 살짝 위로 이동 */
 }
 
 h1 {
@@ -60,5 +61,10 @@ h1 {
 
 .footer {
   text-align: center;
-  margin-top: auto; /* 푸터를 페이지 하단에 고정 */
+  margin-top: 20px; /* 푸터와 컨테이너 사이의 간격 */
+}
+
+.footer p {
+  font-size: 14px;
+  color: #666;
 }
