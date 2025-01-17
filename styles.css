@@ -8,9 +8,10 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* 전체 페이지를 세로 방향으로 배치 */
+  justify-content: space-between; /* 푸터가 아래로 배치되도록 */
+  min-height: 100vh; /* 페이지 높이가 최소 100vh로 설정되어 푸터가 아래에 위치 */
   align-items: center;
-  height: 100vh;
 }
 
 .container {
