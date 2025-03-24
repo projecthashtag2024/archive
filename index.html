@@ -8,32 +8,81 @@
 </head>
 <body>
   <div class="container">
-    <h1>PROJECT HASHTAG 2024</h1>
-    <div class="button-container">
-      <a href="https://your-link-1.com" target="_blank" class="button">Side A<br>모두의 소망이 이루어지는 세계<br>튜토리얼</a>
-      <a href="https://your-link-2.com" target="_blank" class="button">Side B<br>존재하지 않는 세계<br>튜토리얼</a>
+    <h1 id="title">PROJECT HASHTAG 2024</h1>
+    <div class="button-container" id="button-container">
+      <!-- 자바스크립트로 버튼 삽입 -->
     </div>
+    <button id="lang-toggle" class="lang-toggle">한국어</button>
   </div>
-  <div class="footer">
-    <p>
-      임시 페이지입니다. 영상 완성 후 링크 등 수정 예정입니다. <br>
-      아카이브 디자인 완료 후 로고 등 디자인도 반영하겠습니다.
-    </p>
+
+  <div class="footer" id="footer">
+    <!-- 자바스크립트로 푸터 삽입 -->
   </div>
+
+  <script>
+    const content = {
+      ko: {
+        buttons: [
+          {
+            url: "https://your-link-1-kr.com",
+            text: "Side A<br>모두의 소망이 이루어지는 세계<br>튜토리얼",
+          },
+          {
+            url: "https://your-link-2-kr.com",
+            text: "Side B<br>존재하지 않는 세계<br>튜토리얼",
+          },
+        ],
+        footer: "임시 페이지입니다. 영상 완성 후 링크 등 수정 예정입니다. <br>아카이브 디자인 완료 후 로고 등 디자인도 반영하겠습니다.",
+        toggle: "English",
+      },
+      en: {
+        buttons: [
+          {
+            url: "https://your-link-1-en.com",
+            text: "Side A<br>The world where everyone's wishes come true<br>Tutorial",
+          },
+          {
+            url: "https://your-link-2-en.com",
+            text: "Side B<br>A world that does not exist<br>Tutorial",
+          },
+        ],
+        footer: "This is a temporary page. Links will be updated after the video is complete. <br>Logos and design will be added once the archive design is finalized.",
+        toggle: "한국어",
+      },
+    };
+
+    function getInitialLang() {
+      const lang = navigator.language || navigator.userLanguage;
+      return lang.startsWith("ko") ? "ko" : "en";
+    }
+
+    let currentLang = getInitialLang();
+
+    function renderPage() {
+      const langData = content[currentLang];
+      const container = document.getElementById("button-container");
+      container.innerHTML = "";
+
+      langData.buttons.forEach(btn => {
+        const a = document.createElement("a");
+        a.href = btn.url;
+        a.target = "_blank";
+        a.className = "button";
+        a.innerHTML = btn.text;
+        container.appendChild(a);
+      });
+
+      document.getElementById("footer").innerHTML = langData.footer;
+      document.getElementById("lang-toggle").textContent = langData.toggle;
+    }
+
+    document.getElementById("lang-toggle").addEventListener("click", () => {
+      currentLang = currentLang === "ko" ? "en" : "ko";
+      renderPage();
+    });
+
+    // 초기 실행
+    renderPage();
+  </script>
 </body>
 </html>
-
-
-
-
-<!-- redirection code -->
-<!-- <html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=http://projecthashtag.net" />
-  </head>
-  <body>
-    <p>자동으로 연결되지 않으면, <a href="http://projecthashtag.net">이 링크</a>를 클릭하세요.</p>
-    <p>If you are not redirected, <a href="http://projecthashtag.net">click here</a>.</p>
-  </body>
-</html>
- -->
