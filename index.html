@@ -10,13 +10,17 @@
   <div class="container">
     <h1 id="title">PROJECT HASHTAG 2024</h1>
     <div class="button-container" id="button-container">
-      <!-- 자바스크립트로 버튼 삽입 -->
+      <!-- 버튼은 JS로 렌더링 -->
     </div>
-    <button id="lang-toggle" class="lang-toggle">한국어</button>
   </div>
 
   <div class="footer" id="footer">
-    <!-- 자바스크립트로 푸터 삽입 -->
+    <!-- 푸터 내용도 JS로 렌더링 -->
+  </div>
+
+  <!-- ⬇ 언어 전환 버튼은 푸터 아래에 위치 -->
+  <div class="lang-toggle-wrapper" style="text-align: center; margin-top: 30px; margin-bottom: 40px;">
+    <button id="lang-toggle" class="lang-toggle">한국어</button>
   </div>
 
   <script>
@@ -39,11 +43,11 @@
         buttons: [
           {
             url: "https://your-link-1-en.com",
-            text: "Side A<br>The world where everyone's wishes come true<br>Tutorial",
+            text: "Side A. World of Fulfilled Wishes<br>Tutorial",
           },
           {
             url: "https://your-link-2-en.com",
-            text: "Side B<br>A world that does not exist<br>Tutorial",
+            text: "Side B. World of Games You’ll Create<br>Tutorial",
           },
         ],
         footer: "This is a temporary page. Links will be updated after the video is complete. <br>Logos and design will be added once the archive design is finalized.",
@@ -81,7 +85,6 @@
       renderPage();
     });
 
-    // 초기 실행
     renderPage();
   </script>
 </body>
