@@ -6,28 +6,28 @@
 
 @font-face {
   font-family: 'HyundaiSansHead';
-  src: url('./fonts/HyundaiSansHeadPro-Bold.ttf') format('truetype');
+  src: url('./fonts/HyundaiSansHeadPro-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'HyundaiSansHead';
-  src: url('./fonts/HyundaiSansHeadPro-Medium.ttf') format('truetype');
+  src: url('./fonts/HyundaiSansHeadPro-Medium.woff2') format('woff2');
   font-weight: medium;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'HyundaiSansHead';
-  src: url('./fonts/HyundaiSansHeadPro-Regular.ttf') format('truetype');
+  src: url('./fonts/HyundaiSansHeadPro-Regular.woff2') format('woff2');
   font-weight: regular;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'HyundaiSansHead';
-  src: url('./fonts/HyundaiSansHeadPro-Light.ttf') format('truetype');
+  src: url('./fonts/HyundaiSansHeadPro-Light.woff2') format('woff2');
   font-weight: light;
   font-style: normal;
 }
@@ -57,6 +57,8 @@ body {
 }
 
 h1 {
+  font-family: HyundaiSansHead, sans-serif;
+  font-weight: medium;
   margin-bottom: 30px;
 }
 
