@@ -6,34 +6,34 @@
 
 @font-face {
   font-family: 'HyundaiSansHead';
-  src: url('./fonts/HyundaiSansHeadPro-Bold.ttf') format('ttf');
+  src: url('./fonts/HyundaiSansHeadPro-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'HyundaiSansHead';
-  src: url('./fonts/HyundaiSansHeadPro-Medium.ttf') format('ttf');
+  src: url('./fonts/HyundaiSansHeadPro-Medium.ttf') format('truetype');
   font-weight: medium;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'HyundaiSansHead';
-  src: url('./fonts/HyundaiSansHeadPro-Regular.ttf') format('ttf');
+  src: url('./fonts/HyundaiSansHeadPro-Regular.ttf') format('truetype');
   font-weight: regular;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'HyundaiSansHead';
-  src: url('./fonts/HyundaiSansHeadPro-Light.ttf') format('ttf');
+  src: url('./fonts/HyundaiSansHeadPro-Light.ttf') format('truetype');
   font-weight: light;
   font-style: normal;
 }
 
 body {
-  font-family: HyundaiSansHead, normal; font-weight: medium;
+  font-family: HyundaiSansHead, sans-serif; font-weight: medium;
   background-color: #f0f0f0;
   display: flex;
   flex-direction: column; /* 세로로 배치 */
