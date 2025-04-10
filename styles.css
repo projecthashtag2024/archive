@@ -49,6 +49,7 @@ body {
   height: auto;
   display: block;
   margin: 0 auto; /* 가운데 정렬 */
+  margin-bottom: 2rem;
 }
 
 .container {
